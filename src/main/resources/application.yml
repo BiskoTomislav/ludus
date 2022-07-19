@@ -1,0 +1,30 @@
+logging:
+    level:
+        root: INFO
+        org.springframework.web: INFO
+        org.springframework.security: INFO
+
+
+jwt:
+    private.key: classpath:app.key
+    public.key: classpath:app.pub
+
+spring:
+    h2:
+        console:
+            enabled: true
+            settings:
+                web-allow-others: true
+
+spring.datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: sa
+
+
+spring.jpa:
+    show-sql: true
+    properties.hibernate.dialect: org.hibernate.dialect.H2Dialect
+    hibernate.ddl-auto: update
+    defer-datasource-initialization: true
